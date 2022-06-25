@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.esoapps.agoraandroid">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.esoapps.agoraandroid.result.ResultActivity" />
+        <activity
+            android:name="com.esoapps.agoraandroid.inviteVoters.InviteVotersActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name="com.esoapps.agoraandroid.displayElections.VotersActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name="com.esoapps.agoraandroid.displayElections.BallotActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name="com.esoapps.agoraandroid.displayElections.ElectionActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name="com.esoapps.agoraandroid.displayElections.FinishedElectionsActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name="com.esoapps.agoraandroid.displayElections.ActiveElectionsActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name="com.esoapps.agoraandroid.displayElections.PendingElectionsActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name="com.esoapps.agoraandroid.displayElections.TotalElectionsActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name="com.esoapps.agoraandroid.forgotPassword.ForgotPasswordSend"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name="com.esoapps.agoraandroid.createElection.CreateElectionTwo"
+            android:configChanges="orientation|screenSize"
+            android:parentActivityName="com.esoapps.agoraandroid.createElection.CreateElectionOne" />
+        <activity
+            android:name="com.esoapps.agoraandroid.createElection.CreateElectionFour"
+            android:configChanges="orientation|screenSize"
+            android:parentActivityName="com.esoapps.agoraandroid.createElection.CreateElectionThree" />
+        <activity
+            android:name="com.esoapps.agoraandroid.createElection.CreateElectionThree"
+            android:configChanges="orientation|screenSize"
+            android:parentActivityName="com.esoapps.agoraandroid.createElection.CreateElectionTwo" />
+        <activity
+            android:name="com.esoapps.agoraandroid.createElection.CreateElectionOne"
+            android:configChanges="orientation|screenSize"
+            android:parentActivityName="com.esoapps.agoraandroid.home.HomeActivity" />
+        <activity
+            android:name="com.esoapps.agoraandroid.home.HomeActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name="com.esoapps.agoraandroid.signUp.SignUpActivity"
+            android:configChanges="orientation|screenSize"
+            android:parentActivityName="com.esoapps.agoraandroid.main.MainActivity" />
+        <activity
+            android:name="com.esoapps.agoraandroid.logIn.LogInActivity"
+            android:configChanges="orientation|screenSize"
+            android:parentActivityName="com.esoapps.agoraandroid.main.MainActivity" />
+        <activity android:name="com.esoapps.agoraandroid.main.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.esoapps.agoraandroid.SplashScreenActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+    </application>
+
+</manifest>
